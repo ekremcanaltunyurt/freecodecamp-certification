@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guild Application Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form {
+            margin: 1em auto;
+            display: flex;
+            flex-direction: column;
+            padding: 1.75em;
+            background: rgba(0, 0, 0, 0.5);
+            color: #F3F3F3;
+            border-radius: 1em;
+            height: 100%;
+        }
+
+        #title {
+            text-align: center;
+            padding-bottom: 1em;
+        }
+
+        #description {
+            padding-bottom: 1em;
+        }
+
+        #name,
+        #email,
+        #number,
+        #dropdown {
+            display: block;
+            width: 100%;
+            height: 2.4em;
+            color: #495057;
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            border-radius: 0.25em;
+            outline: none;
+            margin: 0.75em 0;
+        }
+
+        input[type="name"]::placeholder {
+            padding-left: 10px;
+            font-size: 1.2em;
+        }
+
+        input[type="email"]::placeholder {
+            padding-left: 10px;
+            font-size: 1.2em;
+        }
+
+        input[type="number"]::placeholder {
+            padding-left: 10px;
+            font-size: 1.2em;
+        }
+
+        #label-dropdown {
+            font-size: 1.2em;
+        }
+
+        .info-1,
+        .info-2,
+        .info-3 {
+            margin-top: 1em;
+        }
+
+        .info-1 label {
+            margin-top: 0.75em;
+            font-size: 1em;
+        }
+
+        .info-2 label {
+            margin-top: 0.75em;
+            font-size: 1em;
+        }
+
+        .info-3 {
+            display: block;
+        }
+
+        .info-3 textarea {
+            width: 100%;
+            margin-top:0.5em;
+            border-radius: 0.5em;
+            outline: none;
+            height: 10em;
+        }
+
+        input[type="radio"] {
+            margin-right: 0.5em;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 0.5em;
+        }
+
+        .button{
+           display: block;
+           margin-top: 0.5em;
+        }
+
+        .button #submit {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1em;
+            cursor: pointer;
+            color: #ced4da;
+            margin-top: 0.5em;
+            border: none;
+            border-radius: 0.75em;
+            font-size: 1em;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container" style="background-image:url(https://images3.alphacoders.com/108/108819.jpg);background-size: cover;">
+
+        <!-- FORM -->
+
+        <div class="form">
+            
+            <h1 id="title">Guild Application Form</h1>
+
+            <p id="description">Do you want to hunt magical and fantastic monsters? Then please join our guild.</p>
+
+            <form id="survey-form">
+                <label for="name" id="name-label">Name </label>
+                <input id="name" type="name" placeholder="Enter your name" required>
+                <label for="email" id="email-label">Email </label>
+                <input id="email" type="email" placeholder="Enter your email" required>
+                <label for="number" id="number-label">Age </label>
+                <input for="number" id="number" type="number" min="18" max="100" placeholder="18">
+
+
+
+                <!-- DROPDOWN -->
+
+                <label for="dropdown" id="label-dropdown">Choose Your Class</label>
+                <select id="dropdown">
+                    <option value="Warrior">Warrior</option>
+                    <option value="Mage">Mage</option>
+                    <option value="Rogue">Hunter</option>
+                    <option value="Priest">Priest</option>
+                    <option value="Warlock">Warlock</option>
+                    <option value="Rogue">Rogue</option>
+                    <option value="Shaman">Shaman</option>
+                    <option value="Paladin">Paladin</option>
+                    <option value="Druid">Druid</option>
+                    <option value="Death-Knight">Death Knight</option>
+                </select>
+
+                <!-- INFO-1 -->
+
+                <div class="info-1">
+                    <p>How many hours a day are you online?</p>
+                    <label style="display:flex;" for="low"><input type="radio" id="low" value="0-3" name="online">
+                        0-3</label>
+                    <label style="display:flex;" for="mid"><input type="radio" id="mid" value="3-6" name="online">
+                        3-6</label>
+                    <label style="display:flex;" for="high"><input type="radio" id="high" value="+6" name="online">
+                        +6</label>
+                </div>
+
+                <!-- INFO-2 -->
+
+                <div class="info-2">
+                    <p>In which area of ​​the game do you want to play more active?</p>
+                    <label style="display:flex;" for="pvp"><input type="checkbox" id="pvp" value="type"
+                        name="pvp">Pvp</label>
+                    <label style="display:flex;" for="pve"><input type="checkbox" id="pve" value="type"
+                        name="pve">Pve</label>
+                </div>
+
+                <!-- INFO-3 -->
+                <div class="info-3">
+                    <p>Can you tell us a little about yourself?</p>
+                    <textarea rows="10" cols="30"></textarea>
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <div class="button">
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+               
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
